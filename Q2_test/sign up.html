@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+fieldset {
+  background-color: #eeeeee;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+input {
+  margin: 5px;
+}
+</style>
+
+<h1>Sign up Form</h1>
+
+<form action="/action_page.php">
+ <fieldset>
+  <legend>sign up </legend>
+  
+  <table>
+  <tr>
+  <td><label for="fname">First name:*</label><br></td>
+  <td><input type="text" id="fname" name="fname" required></td>
+  </tr>
+  <tr>
+  <td><label for="lname">Last name:*</label><br><br></td>
+  <td><input type="text" id="lname" name="lname"required><br><br></td>
+  </tr>
+  <tr>
+  <td><label for="email">Email:*</label><br><br></td>
+  <td><input type="email" id="email" name="email"required><br><br></td>
+  </tr>
+  
+  <tr>
+  <td><label for="Orgnnization">Orgnnization:</label><br><br></td>
+  <td><input type="text" id="Orgnnization" name="Orgnnization"><br><br></td>
+   </tr>
+   
+    <tr>
+  <td><label for="Wphon"> Work Phon:</label><br><br></td>
+  <td><input type="text" id="Wphon" name="Wphon"><br><br></td>
+   </tr>
+   
+    <tr>
+  <td><label for="Cphon">Cell Phon:</label><br><br></td>
+  <td><input type="text" id="Cphon" name="Cphon"><br><br></td>
+   </tr>
+    <tr>
+  <td><label for="add1">Address 1*:</label><br><br></td>
+  <td><input type="test" id="add1" name="add1"required><br><br></td>
+   </tr>
+   
+   <tr>
+  <td><label for="add2">Address 2:</label><br><br></td>
+  <td><input type="test" id="add2" name="add2"><br><br></td>
+   </tr>
+   
+    <tr>
+  <td><label for="City">City:*</label><br><br></td>
+  <td><input type="text" id="City" name="City" required><br><br></td>
+   </tr>
+   
+    <tr>
+  <td><label for="Country">Country:*</label><br><br></td>
+  <td><input type="text" id="Country" name="Country" required><br><br></td>
+ </tr>
+  
+  
+   <tr>
+ <td><div id="my_form">
+  <button type="submit" id="nextStep">Submit</button>
+</div>
+
+<div id="thank_you" style="display: none;">
+  <p>Thanks for filling up the form!</p>
+  <button >Close</button>
+</div>
+
+<script>
+  var nextStep = document.querySelector('#nextStep');
+
+  nextStep.addEventListener('click', function (e) {
+    e.preventDefault();
+    // Hide first view
+    document.getElementById('my_form').style.display = 'none';
+
+    // Show thank you message element
+    document.getElementById('thank_you').style.display = 'block';
+  });
+</script>
+</td>
+  </tr>
+  </table>
+ </fieldset>
+</form>
+ 
+</body>
+</html>
